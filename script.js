@@ -38,19 +38,40 @@ document.addEventListener('DOMContentLoaded', function() {
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
     const coursesSlider = document.querySelector('.courses-slider');
-    const prevBtn = document.querySelector('.carousel-prev');
-    const nextBtn = document.querySelector('.carousel-next');
+    const coursesPrevBtn = document.querySelector('.courses-carousel .carousel-prev');
+    const coursesNextBtn = document.querySelector('.courses-carousel .carousel-next');
     
-    if (coursesSlider && prevBtn && nextBtn) {
-        prevBtn.addEventListener('click', function() {
+    if (coursesSlider && coursesPrevBtn && coursesNextBtn) {
+        coursesPrevBtn.addEventListener('click', function() {
             coursesSlider.scrollBy({
                 left: -380,
                 behavior: 'smooth'
             });
         });
         
-        nextBtn.addEventListener('click', function() {
+        coursesNextBtn.addEventListener('click', function() {
             coursesSlider.scrollBy({
+                left: 380,
+                behavior: 'smooth'
+            });
+        });
+    }
+    
+    // Events Carousel
+    const eventsSlider = document.querySelector('.events-slider');
+    const eventsPrevBtn = document.querySelector('.events-carousel .carousel-prev');
+    const eventsNextBtn = document.querySelector('.events-carousel .carousel-next');
+    
+    if (eventsSlider && eventsPrevBtn && eventsNextBtn) {
+        eventsPrevBtn.addEventListener('click', function() {
+            eventsSlider.scrollBy({
+                left: -380,
+                behavior: 'smooth'
+            });
+        });
+        
+        eventsNextBtn.addEventListener('click', function() {
+            eventsSlider.scrollBy({
                 left: 380,
                 behavior: 'smooth'
             });

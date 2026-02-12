@@ -457,6 +457,27 @@ body {
     color: var(--white);
 }
 
+.events-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.events-slider {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    flex: 1;
+}
+
+.events-slider::-webkit-scrollbar {
+    display: none;
+}
+
 .events-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -465,7 +486,9 @@ body {
 }
 
 .event-card {
+    min-width: 350px;
     background-color: var(--white);
+    border: 2px solid var(--primary-green);
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -1165,6 +1188,11 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .events-carousel,
+    .testimonials-grid {
+        /* Events carousel adapts on mobile */
+    }
+    
     .events-grid,
     .testimonials-grid {
         grid-template-columns: repeat(2, 1fr);
