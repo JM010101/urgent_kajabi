@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - School Alliance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span>Registration Now Open for Corwange Sumeet 200</span>
+            </div>
+            <div class="top-bar-right">
+                <span><i class="fas fa-envelope"></i> info@example.com</span>
+                <span><i class="fas fa-phone"></i> +1 (000)-000-0000</span>
+                <span><i class="fas fa-clock"></i> Mon-Sat: 8:00 am - 7:00 pm</span>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="logo.png" alt="School Alliance" class="logo-img">
+                    <span class="logo-text">School Alliance</span>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/courses">Courses</a></li>
+                        <li><a href="/coaching">Coaching</a></li>
+                        <li><a href="/events" class="active">Events</a></li>
+                        <li><a href="/resources">Resources</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <div class="header-cta">
+                    <a href="/login" class="btn btn-outline">Login</a>
+                    <a href="/get-started" class="btn btn-primary">Get Started</a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Events Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Upcoming Events</h1>
+            <p>Join us for in-person and online events designed for school leaders and education teams.</p>
+        </div>
+    </section>
+
+    <!-- Events Filter/Search -->
+    <section class="events-filter">
+        <div class="container">
+            <div class="filter-controls">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="eventSearch" placeholder="Search events...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Events</button>
+                    <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+                    <button class="filter-btn" data-filter="past">Past Events</button>
+                    <button class="filter-btn" data-filter="virtual">Virtual</button>
+                    <button class="filter-btn" data-filter="in-person">In-Person</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Listing -->
+    <section class="events-listing">
+        <div class="container">
+            <div class="events-grid" id="eventsGrid">
+                <!-- Event Card 1 -->
+                <div class="event-card-detailed" data-category="upcoming virtual">
+                    <div class="event-image">
+                        <img src="https://via.placeholder.com/400x250?text=Event+1" alt="Leadership Summit 2024">
+                        <div class="event-badge virtual">Virtual</div>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>March 15, 2024</span>
+                        </div>
+                        <div class="event-time">
+                            <i class="fas fa-clock"></i>
+                            <span>10:00 AM - 2:00 PM EST</span>
+                        </div>
+                        <h3>Leadership Summit 2024</h3>
+                        <p>Join us for a comprehensive leadership summit featuring expert speakers, interactive workshops, and networking opportunities for school administrators and education leaders.</p>
+                        <div class="event-location">
+                            <i class="fas fa-video"></i>
+                            <span>Virtual Event - Zoom Link Provided</span>
+                        </div>
+                        <div class="event-actions">
+                            <button class="btn btn-primary" onclick="openRegistrationModal('event-1')">Register Now - Free</button>
+                            <a href="/events/leadership-summit-2024" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 2 -->
+                <div class="event-card-detailed" data-category="upcoming in-person">
+                    <div class="event-image">
+                        <img src="https://via.placeholder.com/400x250?text=Event+2" alt="Certification Workshop">
+                        <div class="event-badge in-person">In-Person</div>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>April 20, 2024</span>
+                        </div>
+                        <div class="event-time">
+                            <i class="fas fa-clock"></i>
+                            <span>9:00 AM - 4:00 PM EST</span>
+                        </div>
+                        <h3>Certification Workshop: School Leadership</h3>
+                        <p>An intensive one-day workshop focused on practical certification strategies for school leaders. Includes hands-on activities and certification exam preparation.</p>
+                        <div class="event-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Education Center, New York, NY 10001</span>
+                        </div>
+                        <div class="event-actions">
+                            <button class="btn btn-primary" onclick="openRegistrationModal('event-2')">Register Now - Free</button>
+                            <a href="/events/certification-workshop" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 3 -->
+                <div class="event-card-detailed" data-category="upcoming virtual">
+                    <div class="event-image">
+                        <img src="https://via.placeholder.com/400x250?text=Event+3" alt="Monthly Networking">
+                        <div class="event-badge virtual">Virtual</div>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>May 10, 2024</span>
+                        </div>
+                        <div class="event-time">
+                            <i class="fas fa-clock"></i>
+                            <span>6:00 PM - 7:30 PM EST</span>
+                        </div>
+                        <h3>Monthly Networking Session</h3>
+                        <p>Connect with fellow school leaders in this monthly virtual networking event. Share experiences, discuss challenges, and build your professional network.</p>
+                        <div class="event-location">
+                            <i class="fas fa-video"></i>
+                            <span>Virtual Event - Microsoft Teams</span>
+                        </div>
+                        <div class="event-actions">
+                            <button class="btn btn-primary" onclick="openRegistrationModal('event-3')">Register Now - Free</button>
+                            <a href="/events/monthly-networking" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 4 -->
+                <div class="event-card-detailed" data-category="past">
+                    <div class="event-image">
+                        <img src="https://via.placeholder.com/400x250?text=Event+4" alt="Past Event">
+                        <div class="event-badge past">Past Event</div>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>February 5, 2024</span>
+                        </div>
+                        <div class="event-time">
+                            <i class="fas fa-clock"></i>
+                            <span>10:00 AM - 2:00 PM EST</span>
+                        </div>
+                        <h3>Winter Leadership Conference</h3>
+                        <p>This event has passed. Check out our upcoming events for similar opportunities.</p>
+                        <div class="event-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Virtual Event</span>
+                        </div>
+                        <div class="event-actions">
+                            <button class="btn btn-outline" disabled>Event Ended</button>
+                            <a href="/events/winter-leadership-conference" class="btn btn-outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Events Message -->
+            <div class="no-events" id="noEvents" style="display: none;">
+                <i class="fas fa-calendar-times"></i>
+                <h3>No events found</h3>
+                <p>Try adjusting your search or filter criteria.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Modal -->
+    <div class="modal" id="registrationModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeRegistrationModal()" aria-label="Close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h2>Register for Event</h2>
+                <p id="modalEventTitle">Event Title</p>
+            </div>
+            <form class="registration-form" id="registrationForm" onsubmit="handleRegistration(event)">
+                <input type="hidden" id="eventId" name="eventId">
+                
+                <div class="form-group">
+                    <label for="regFirstName">First Name *</label>
+                    <input type="text" id="regFirstName" name="firstName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="regLastName">Last Name *</label>
+                    <input type="text" id="regLastName" name="lastName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="regEmail">Email Address *</label>
+                    <input type="email" id="regEmail" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="regPhone">Phone Number</label>
+                    <input type="tel" id="regPhone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="regOrganization">School/Organization</label>
+                    <input type="text" id="regOrganization" name="organization">
+                </div>
+                
+                <div class="form-group">
+                    <label for="regTitle">Job Title</label>
+                    <input type="text" id="regTitle" name="title">
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" name="newsletter" value="yes">
+                        Subscribe to our newsletter for event updates
+                    </label>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" name="terms" required>
+                        I agree to the <a href="/terms">Terms and Conditions</a> *
+                    </label>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-outline" onclick="closeRegistrationModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Complete Registration</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage" style="display: none;">
+        <div class="success-content">
+            <i class="fas fa-check-circle"></i>
+            <h3>Registration Successful!</h3>
+            <p>You will receive a confirmation email shortly with event details and access information.</p>
+            <button class="btn btn-primary" onclick="closeSuccessMessage()">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="School Alliance" class="logo-img">
+                        <span class="logo-text">School Alliance</span>
+                    </div>
+                    <p>School Alliance provides practical courses, certifications, events, coaching, and resources for school leaders and education teams.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/courses">Courses</a></li>
+                        <li><a href="/coaching">Coaching</a></li>
+                        <li><a href="/events">Events</a></li>
+                        <li><a href="/resources">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/faqs">FAQs</a></li>
+                        <li><a href="/help">Help Center</a></li>
+                        <li><a href="/success-stories">Success Stories</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect With Us</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 000 0000 0000</li>
+                        <li><i class="fas fa-envelope"></i> contact@sofetch.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Address We Be Here</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for updates and resources.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+                <p>&copy; Copyright 2024. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="events-script.js"></script>
+</body>
+</html>
